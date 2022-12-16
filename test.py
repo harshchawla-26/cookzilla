@@ -1,0 +1,1 @@
+print(len('Three members of a Christian student group and their faculty adviser settled a lawsuit against the University of Idaho after officials agreed to pay $90,000 and drop sanctions imposed after a complaint about the groups stance on marriage.'))

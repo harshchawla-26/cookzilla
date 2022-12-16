@@ -1,0 +1,29 @@
+<html>
+<head>
+</head>
+<body>
+<form action="/postSteps" method="POST">
+    <h3>Enter the steps for the recipe</h3>
+	<input type="text" name = "stepno" placeholder="step number" required/>
+    <input type="text" name = "stepdesc" placeholder="step description" required/></br>
+	<input type="submit" value = "Next step" />
+	{% if error %}
+		<p class="error"><strong>Error:</strong> {{error}}</p>
+	{% endif %}
+</form>
+<br>
+<form action="/postIngredientsPage" method="POST">
+	If all steps completed, proceed to entering ingredients
+    <br>
+	<input type="submit" value = Ingredients />
+	
+</form>
+
+<a href="/home">Go back</a><br>
+<a href="/logout">Logout</a>
+
+
+</body>
+
+
+</html>

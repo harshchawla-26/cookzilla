@@ -1,0 +1,38 @@
+<html>
+<head>
+</head>
+<body>
+	<style type="text/css">
+        table, th, td{
+            border: 1px solid black;
+        }
+    </style>
+
+	<h1>Welcome {{username}}</h1>
+	<a href="/search_recipe">Search Recipe</a>
+	<br>
+	<a href="/post_recipe_page">Post Recipe</a> 
+	<br>
+	<a href="/logout">Logout</a>
+
+	<h3>Recipes posted by you</h3>
+
+
+	<table>
+		<th>Recipe ID</th>
+		<th>Recipe Title</th>
+		
+	{% for line in recipe %}
+	<tr>
+	<td>{{line.recipeID}}</td>
+	<td>{{line.title}}</td>
+	
+	
+	</tr>
+	{% endfor %}
+	</table>
+
+</body>
+
+
+</html>

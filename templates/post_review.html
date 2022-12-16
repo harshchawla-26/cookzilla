@@ -1,0 +1,25 @@
+<html>
+<head>
+</head>
+<body>
+<form action="/post_review" method="POST">
+    <h3>Enter the review for the recipe</h3>
+	<input type="text" name = "revtitle" placeholder="Review Title" required/></br>
+    <input type="text" name = "revdesc" placeholder="Review Description" /></br>
+    <input type="number" name = "stars" placeholder="Stars" required/></br>
+    
+	<input type="submit" value = "Next" />
+	{% if error %}
+		<p class="error"><strong>Error:</strong> {{error}}</p>
+	{% endif %}
+</form>
+
+
+<a href="/home">Go back</a><br>
+<a href="/logout">Logout</a>
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,38 @@
+<html>
+<head>
+</head>
+<body>
+
+	<h1>Hi {{username}}, what would you like to search for?</h1>
+	<br>
+    Search using Tag or Stars
+    <br>
+
+    <form action="/recipe_results" method="POST">
+
+
+    
+    <input type="text" name="tag" placeholder="Enter Tag"/>
+	<br>
+    <input type="number" name="star" placeholder="Enter Stars"/>
+    <br>
+
+    <input type="submit" value="View Posts">
+
+    </form>
+<p></p>
+<form action="/all_recipes" method="POST">
+    <input type="submit" value="See all recipes"/><br>
+    {% if error %}
+		<p class="error"><strong>Error:</strong> {{error}}</p>
+	{% endif %}
+</form>
+<p></p>
+	<a href="/home">Go back</a><br>
+<a href="/logout">Logout</a>
+
+
+</body>
+
+
+</html>

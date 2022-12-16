@@ -1,0 +1,31 @@
+<html>
+<head>
+</head>
+<body>
+
+
+Whose recipe would you like to see?
+<br>
+
+<form action="/show_recipe_lo" method="GET">
+
+
+{% for line in recipe_list %}
+<input type="radio" name="recipe" value={{line.recipeID}}>{{line.recipeID}}</input><label name="title">&nbsp; {{line.title}}</label>
+	<br>
+{% endfor %}
+
+<input type="submit" value="View Recipe">
+
+</form>
+
+
+
+<a href="/">Go back</a><br>
+
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,76 @@
+<html>
+<head>
+</head>
+<body>
+    <style type="text/css">
+        table, th, td{
+            border: 1px solid black;
+        }
+    </style>
+
+{% for line in details %}
+<h2>RecipeID: {{line.recipeID}}<br></h2>
+
+<h2>Recipe Title: {{line.title}}<br></h2>
+
+Number of Servings: {{line.numServings}}<br>
+
+Posted By: {{line.postedBy}}<br>
+{% endfor %}
+<p></p>
+<h3>Steps:</h3>
+{% for line in steps %}
+
+{{line.stepNo}}
+{{line.sDesc}}<br>
+
+{% endfor %}
+<p></p>
+
+<h3>Ingredients</h3>
+<table>
+	<th>Name</th>
+	<th>Amount</th>
+    <th>Unit</th>
+    <th>Purchase Link</th>
+{% for line in ingredients %}
+<tr>
+<td>{{line.iName}}</td>
+<td>{{line.amount}}</td>
+<td>{{line.unitName}}</td>
+<td>{{line.purchaseLink}}</td>
+</tr>
+{% endfor %}
+</table>
+<p></p>
+
+
+{% for line in pictures %}
+<img src= {{line.pictureURL}} alt="Girl in a jacket" width="250" height="200">
+{% endfor %}
+
+<h3>Reviews</h3>
+<table>
+	<th>Review Title</th>
+	<th>Review Description</th>
+    <th>Rview Stars</th>
+    <th>Review By</th>
+{% for line in review %}
+<tr>
+<td>{{line.revTitle}}</td>
+<td>{{line.revDesc}}</td>
+<td>{{line.stars}}</td>
+<td>{{line.userName}}</td>
+</tr>
+{% endfor %}
+</table>
+<p></p>
+
+
+<a href="/">Go back</a><br>
+
+
+</body>
+
+
+</html>
